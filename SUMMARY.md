@@ -9,3 +9,4 @@
 ## Notes
 
 * [Nmap](notes/nmap.md)
+* [Basic Linux Commands](notes/basic-linux-commands.md)
