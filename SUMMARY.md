@@ -18,3 +18,5 @@
 * [Ethical Hacking](notes/ethical-hacking/README.md)
   * [Nmap](notes/nmap.md)
   * [PPID Spoofing Guide](notes/ethical-hacking/ppid-spoofing-guide.md)
+* [Azure ( AZ-104 ) Labs](notes/azure-az-104-labs/README.md)
+  * [Lab-01](notes/azure-az-104-labs/lab-01.md)
