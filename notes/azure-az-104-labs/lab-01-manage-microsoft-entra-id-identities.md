@@ -2,7 +2,7 @@
 icon: flask-vial
 ---
 
-# Lab-01
+# Lab-01:   Manage Microsoft Entra ID Identities
 
 <figure><img src="../../.gitbook/assets/Question.png" alt=""><figcaption><p>Lab-01 Question</p></figcaption></figure>
 
@@ -34,10 +34,10 @@ icon: flask-vial
 
 <figure><img src="../../.gitbook/assets/Screenshot from 2025-02-04 20-26-19.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-04 20-33-56.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
 ## Creating a Group and Adding Members
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-04 21-09-46.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-04 21-10-13.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="broken-reference" alt=""><figcaption></figcaption></figure>
