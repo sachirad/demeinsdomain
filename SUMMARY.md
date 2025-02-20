@@ -21,3 +21,4 @@
 * [Azure ( AZ-104 ) Labs](notes/azure-az-104-labs/README.md)
   * [Lab-01:   Manage Microsoft Entra ID Identities](notes/azure-az-104-labs/lab-01-manage-microsoft-entra-id-identities.md)
   * [Lab-02-A:   Manage Subscription & RBAC](notes/azure-az-104-labs/lab-02-a-manage-subscription-and-rbac.md)
+  * [Lab-02-B: Manage Governance via Azure Policy](notes/azure-az-104-labs/lab-02-b-manage-governance-via-azure-policy.md)
