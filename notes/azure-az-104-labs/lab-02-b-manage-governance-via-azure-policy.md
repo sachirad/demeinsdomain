@@ -27,3 +27,31 @@ icon: flask-vial
 ### Go to policies
 
 <figure><img src="../../.gitbook/assets/Screenshot from 2025-02-14 17-32-21.png" alt=""><figcaption></figcaption></figure>
+
+### Search for <kbd>Require a tag and its value on resources</kbd> and click assign&#x20;
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-20 17-34-59.png" alt=""><figcaption></figcaption></figure>
+
+### Change Assignment Name  and Scope as required
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-20 17-38-09.png" alt=""><figcaption></figcaption></figure>
+
+### And the Tag and Value
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-20 17-38-32.png" alt=""><figcaption></figcaption></figure>
+
+### The Policy is Added
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-20 17-43-04.png" alt=""><figcaption></figcaption></figure>
+
+### Go to Storage Accounts
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-20 17-43-44.png" alt=""><figcaption></figcaption></figure>
+
+### Creating a Storage Account
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-20 17-53-10.png" alt=""><figcaption></figcaption></figure>
+
+### Getting the Required Tag Policy
+
+<figure><img src="../../.gitbook/assets/Screenshot from 2025-02-20 17-53-20.png" alt=""><figcaption></figcaption></figure>
