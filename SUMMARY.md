@@ -22,3 +22,6 @@
   * [Lab-01:   Manage Microsoft Entra ID Identities](notes/azure-az-104-labs/lab-01-manage-microsoft-entra-id-identities.md)
   * [Lab-02-A:   Manage Subscription & RBAC](notes/azure-az-104-labs/lab-02-a-manage-subscription-and-rbac.md)
   * [Lab-02-B: Manage Governance via Azure Policy](notes/azure-az-104-labs/lab-02-b-manage-governance-via-azure-policy.md)
+  * [Lab 03 - Manage Azure resources by using Azure Resource Manager Templates](notes/azure-az-104-labs/lab-03-manage-azure-resources-by-using-azure-resource-manager-templates.md)
+* [Azure (AZ-305)](notes/azure-az-305/README.md)
+  * [Cost Optimization](notes/azure-az-305/cost-optimization.md)
