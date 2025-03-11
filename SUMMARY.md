@@ -15,6 +15,7 @@
   * [Archiving and Compression Commands](notes/archiving-and-compression-commands.md)
   * [System Information Commands](notes/system-information-commands.md)
   * [Process Management Commands](notes/process-management-commands.md)
+  * [RHCSA EX200 Exam Scenario](notes/linux/rhcsa-ex200-exam-scenario.md)
 * [Ethical Hacking](notes/ethical-hacking/README.md)
   * [Nmap](notes/nmap.md)
   * [PPID Spoofing Guide](notes/ethical-hacking/ppid-spoofing-guide.md)
