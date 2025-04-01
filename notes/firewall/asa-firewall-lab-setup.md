@@ -21,6 +21,8 @@ icon: shield
 
 
 
+## Configure IP Addresses
+
 ### "INSIDE" Router IP Configuration
 
 ```
@@ -130,3 +132,15 @@ end
 wr memory
 ```
 
+
+
+## Build Backbone Connectivity
+
+### "ASA1" Firewall
+
+```
+enable
+conf t
+route INSIDE 4.4.4.4 255.255.255.255 192.168.8.2
+route DMZ 0.0.0.0 0.0.0.0 10.10.2.2
+```
