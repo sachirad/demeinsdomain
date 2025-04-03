@@ -141,6 +141,91 @@ wr memory
 ```
 enable
 conf t
-route INSIDE 4.4.4.4 255.255.255.255 192.168.8.2
-route DMZ 0.0.0.0 0.0.0.0 10.10.2.2
+router ospf 1
+network 192.168.8.0 255.255.255.0 area 0
+network 10.10.2.0 255.255.255.0 area 0
+end
+wr
+
+# This is to allow ICMP traffic to pass 
+# Add the ACLs according to your requirements
+
+conf t 
+fixup protocol icmp
+policy-map global_policy
+class inspection_default
+inspect icmp
+access-list ICMP-ALLOW permit icmp any any echo
+access-list ICMP-ALLOW permit icmp any any echo-reply
+access-group ICMP-ALLOW in interface DMZ
+access-group ICMP-ALLOW in interface INSIDE
+end
+wr
+```
+
+### "ASA2" Firewall
+
+```
+enable
+conf t
+router ospf 1
+network 192.168.1.0 255.255.255.0 area 0
+network 10.10.1.0 255.255.255.0 area 0
+network 187.15.0.0 255.255.255.0 area 0
+end
+wr
+
+# This is to allow ICMP traffic to pass
+# Add the ACLs according to your requirements
+
+conf t
+fixup protocol icmp
+policy-map global_policy
+class inspection_default
+inspect icmp
+access-list ICMP-ALLOW permit icmp any any echo
+access-list ICMP-ALLOW permit icmp any any echo-reply
+access-group ICMP-ALLOW in interface DMZ
+access-group ICMP-ALLOW in interface MGNT
+access-group ICMP-ALLOW in interface OUTPUT
+end
+wr
+
+```
+
+### "OUTSIDE" Router
+
+```
+enable
+conf ter
+router ospf 1
+network 187.15.0.0 0.0.0.255 area 0
+network 8.8.8.1 0.0.0.0 area 0
+network 8.8.8.2 0.0.0.0 area 0
+end
+wr
+```
+
+### "DMZ" Router
+
+```
+enable
+conf ter
+router ospf 1
+network 10.10.2.0 0.0.0.255 area 0
+network 10.10.1.0 0.0.0.255 area 0
+end
+wr
+```
+
+### "INSIDE" Router
+
+```
+enable
+conf ter
+router ospf 1
+network 192.168.8.0 0.0.0.255 area 0
+network 4.4.4.4 0.0.0.0 area 0
+end
+wr
 ```
