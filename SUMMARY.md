@@ -27,4 +27,4 @@
   * [Lab 03 - Manage Azure resources by using Azure Resource Manager Templates](notes/azure-az-104-labs/lab-03-manage-azure-resources-by-using-azure-resource-manager-templates.md)
 * [Firewall](notes/firewall/README.md)
   * [ASA Firewall Lab Setup](notes/firewall/asa-firewall-lab-setup.md)
-  * [Backbone Connectivity](notes/firewall/backbone-connectivity.md)
+  * [NAT Connections](notes/firewall/nat-connections.md)
