@@ -28,3 +28,8 @@
 * [Firewall](notes/firewall/README.md)
   * [ASA Firewall Lab Setup](notes/firewall/asa-firewall-lab-setup.md)
   * [NAT Connections](notes/firewall/nat-connections.md)
+
+***
+
+* [IPS/IDS](ips-ids/README.md)
+  * [Build Your Own IPS/IDS](ips-ids/build-your-own-ips-ids.md)
