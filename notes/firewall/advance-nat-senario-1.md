@@ -34,21 +34,47 @@ no shut
 
 ```
 
+## Inside to Outside Access Configuration&#x20;
 
+### Configure PAT&#x20;
 
+This to make sure that inside network has access to the outside network.
 
+```
+object network inside-net
+subnet 10.10.10.0 255.255.255.0
+nat (inside,outside) dynamic interface
+```
 
+So this would translate the internal 10.10.10.0/24 address into 192.168.10.1 address. This would provide outside access for internal systems. You can check the network translation by typing the following command in the firewall.
 
+```
+show xlate
+```
 
+### Configure Default Route
 
+I added a default router to the outside machine&#x20;
 
+```
+route outside 0.0.0.0 0.0.0.0 192.168.10.100
+```
 
+### Add ICMP for Inspection
 
+But after doing all of this you cannot ping to the outside machine that is because the firewall does not inspect the ICMP Ping requests. So you need to add it for inspection.
 
+```
+configure terminal
+policy-map global_policy
+class inspection_default
+inspect icmp
+exit
+```
 
+Now the Ping should work perfectly fine !!!
 
-
-
+## Outside to Inside Access Configuration
 
 
 
