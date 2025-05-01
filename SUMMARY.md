@@ -28,6 +28,7 @@
 * [Firewall](notes/firewall/README.md)
   * [ASA Firewall Lab Setup](notes/firewall/asa-firewall-lab-setup.md)
   * [NAT Connections](notes/firewall/nat-connections.md)
+  * [Advance NAT Senario 1](notes/firewall/advance-nat-senario-1.md)
 
 ***
 
