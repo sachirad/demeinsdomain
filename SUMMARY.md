@@ -30,6 +30,8 @@
   * [NAT Connections](notes/firewall/nat-connections.md)
   * [Advance NAT Senario 1](notes/firewall/advance-nat-senario-1.md)
   * [Advance NAT Senario 2](notes/firewall/advance-nat-senario-2.md)
+* [RHCSA Exam Prep](notes/rhcsa-exam-prep/README.md)
+  * [Full RHCSA Style Practice Project](notes/rhcsa-exam-prep/full-rhcsa-style-practice-project.md)
 
 ***
 
