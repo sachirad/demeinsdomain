@@ -1,10 +1,8 @@
 # Table of contents
 
 * [Welcome](README.md)
-
-## Getting Started
-
-* [Quickstart](getting-started/quickstart.md)
+* [Exam Resourses](exam-resourses/README.md)
+  * [Understand and Use Essential Tools](exam-resourses/understand-and-use-essential-tools.md)
 
 ## Notes
 
