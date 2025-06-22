@@ -3,6 +3,7 @@
 * [Welcome](README.md)
 * [Exam Resourses](exam-resourses/README.md)
   * [Understand and Use Essential Tools](exam-resourses/understand-and-use-essential-tools.md)
+  * [Operate Running Systems](exam-resourses/operate-running-systems.md)
 
 ## Notes
 
