@@ -10,6 +10,8 @@ Below are hands-on, exam-style questions covering every subtopic you listed. The
 
 ***
 
+## <mark style="color:yellow;">Qustions</mark>
+
 **Access a shell prompt and issue commands with correct syntax**
 
 * Log in as the user `student` and open a Bash shell. Display your current working directory and list all files, including hidden ones, with detailed information.
@@ -76,13 +78,82 @@ Below are hands-on, exam-style questions covering every subtopic you listed. The
 
 ***
 
-#### Tips
+## <mark style="color:yellow;">Answers</mark>
 
-* Practice each task on a real or virtual RHEL 9 system.
-* Use only the command line (no graphical tools).
-* Ensure changes persist after reboot where relevant.
+**Access a shell prompt and issue commands with correct syntax**
 
-These questions will help you cover all essential tools required by the RHCSA v9 exam[^1].
+* pwd       ->     Print working directory
+* ls -al      ->     Long list everything including the hidden files and folders
+
+**Use input-output redirection (>, >>, |, 2>, etc.)**
+
+* ls /etc > etc\_list.txt
+* date >> etc\_list.txt
+* ls /nonexistent 2> error.log
+* cat /etc/passwd /nonexistent &> conbined.log
+
+**Use grep and regular expressions to analyze text**
+
+* grep -i "root" /etc/passwd
+* ls /etc | grep '.conf$'  or  find /etc -type f -name "\*.conf"
+* grep '^\[0-9]' /var/log/messages
+
+**Access remote systems using SSH**
+
+* ssh-keygen -t rsa
+* ssh-copy-id prax@172.16.57.148
+* ssh student@172.16.57.148
+* scp /etc/hosts prax@172.16.57.148:\~/
+
+**Log in and switch users in multiuser targets**
+
+* systemctl get-default
+* systemctl set-default multi-user.target.
+* sudo su
+
+**Archive, compress, unpack, and uncompress files using tar, gzip, and bzip2**
+
+* tar -czvf etc.tar.gz /etc/
+* tar -cjvf log.tar.bz /var/log
+* tar -tzf etc.tar.gz
+* tar -tvf log.tar.bz
+* mkdir extracted
+* cd extracted
+* tar -xzvf ../etc.tar.gz
+* tar -xjvf ../log.tar.bz
+
+**Create and edit text files**
+
+* echo "RHCSA Practice" > notes.txt
+* vim notes.txt
+* press "i"
+* type "Second line"
+* press "Esc"
+* type ":wq!" and Enter
+
+**Create, delete, copy, and move files and directories**
+
+* mkdir practice
+* cp notes.txt practice/
+* mv notes.txt practice/
+* rm -rf practice/
+
+**Create hard and soft links**
+
+* ln /etc/hosts \~/hosts.hard
+* ln -s /etc/hosts \~/hosts.hard
+
+**List, set, and change standard ugo/rwx permissions**
+
+* chmod 600 notes.txt
+* chmod -r  777 practice/
+* Use `ls -l` to display the permissions of both files and directories[^1].
+
+**Locate, read, and use system documentation including man, info, and files in /usr/share/doc**
+
+* man tar
+* info grep
+* more /usr/share/doc/bash/README
 
 ⁂
 
