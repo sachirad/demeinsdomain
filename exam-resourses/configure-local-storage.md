@@ -10,6 +10,8 @@ Based on official RHCSA objectives and practical exam-style tasks, here are ques
 
 ***
 
+## <mark style="color:green;">Questions</mark>
+
 #### List, create, delete partitions on MBR and GPT disks
 
 * List all partitions and disks on the system, showing details such as size and type.
@@ -25,7 +27,6 @@ Based on official RHCSA objectives and practical exam-style tasks, here are ques
 
 * Create a volume group named `datastore` using the physical volumes `/dev/sdb1` and `/dev/sdc1`.
 * Extend an existing volume group by adding a new physical volume `/dev/sdd1`.
-* Remove a physical volume from a volume group after migrating data off it.
 
 #### Create and delete logical volumes
 
@@ -61,17 +62,54 @@ Based on official RHCSA objectives and practical exam-style tasks, here are ques
 
 ***
 
-#### Tips
+## <mark style="color:red;">Answers</mark>
 
-* Always verify changes with `lsblk`, `pvs`, `vgs`, `lvs`, and `blkid`.
-* Use `mount -a` to test `/etc/fstab` entries without reboot.
-* Practice non-destructive modifications carefully to avoid data loss.
-* Reboot after storage configuration to confirm persistence[^2].
+#### List, create, delete partitions on MBR and GPT disks
 
-These questions and scenarios will help you comprehensively practice the "Configure local storage" objective for the RHCSA v9 exam[^1].
+* df -Th or lsblk -ft
+* parted&#x20;
+  * sudo parted /dev/sda
+  * mktable GPT
+  * mkpart
+* rm 1
+
+#### Create and remove physical volumes
+
+* pvcreate /dev/sda1 /dev/sda2
+* pvmove /dev/sda1
+* vgreduce vg\_group /dev/sda1
+* sudo pvremove /dev/sda1
+
+#### Assign physical volumes to volume groups
+
+* vgcreate datastore /dev/sda1&#x20;
+* vgextend datastore /dev/sda2
+
+#### Create and delete logical volumes
+
+* &#x20;lvcreate -n accounting\_lv -L 150MB datastore
+* mkfs.ext4 /dev/datastore/accounting\_lv&#x20;
+* mkdir -p /datastore/accounting
+* mount /dev/datastore/accounting\_lv /datastore/accounting/
+* sudo umount /datastore/accounting
+* sudo lvremove /dev/datastore/accounting\_lv
+
+#### Configure systems to mount file systems at boot by UUID or label
+
+* blkid /dev/mapper/datastore-accounting\_lv or blkid
+* vim fstab and enter the UUID and mount point file system rest are defualt
+* vim fstab and enter the label and mount point file system rest are defualt
+
+#### Add new partitions and logical volumes, and swap to a system non-destructively
+
+* parted /dev/sda
+* mkpart&#x20;
+* mkswap /dev/sda2&#x20;
+* swapon /dev/sda2
+* lvextend -L +50MB /dev/datastore/accounting\_lv
+* resize2ft /dev/datastore/accounting\_lv    ( This is for ext file systems only)
+* xfs\_growfs /dev/datastore/accounting\_lv      ( This is for xfs file systems only)
 
 ⁂
 
 [^1]: https://qtechbabble.wordpress.com/2024/02/25/rhcsa-9-exam-study-points-configure-local-storage/
-
-[^2]: https://learn.redhat.com/t5/Platform-Linux/Why-am-I-failing-my-RHCSA-V9-exam/td-p/35520
