@@ -5,6 +5,8 @@
   * [Understand and Use Essential Tools](exam-resourses/understand-and-use-essential-tools.md)
   * [Operate Running Systems](exam-resourses/operate-running-systems.md)
   * [Configure Local Storage](exam-resourses/configure-local-storage.md)
+  * [Manage Security](exam-resourses/manage-security.md)
+  * [Manage Containers](exam-resourses/manage-containers.md)
 
 ## Notes
 
